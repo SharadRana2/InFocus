@@ -1,3 +1,4 @@
+const cover = document.querySelector(".cover");
 const addForm = document.querySelector(".add");
 const search = document.querySelector(".search input");
 const list = document.querySelector(".todos");
@@ -51,6 +52,11 @@ const generateDataTemplate = (counter, hours = 0) => {
   totalPomo.innerText = `Total Pomos: ${counter}`;
   totalTime.innerText = `Total Time : ${hours} hrs`;
 };
+//Modal Template
+const ModalTemplate = () => {
+  const modal = `<div class="modal">Hello</div>`;
+  cover.innerHTML = modal;
+};
 //changing greeting according to user time-zone
 if (currentHour < 12) {
   time = "Good Morning";
@@ -96,16 +102,15 @@ const focusTimer = () => {
 
 //breakTimer
 const breakTimer = () => {
-  if (breakMinutes.innerText == 0 && breakSeconds.innerText == 0){
+  if (breakMinutes.innerText == 0 && breakSeconds.innerText == 0) {
     clearInterval(breaktimer);
     resetBreak();
-  }
-   else if (breakSeconds.innerText != 0) {
+  } else if (breakSeconds.innerText != 0) {
     breakSeconds.innerText--;
   } else if (breakMinutes.innerText != 0 && breakSeconds.innerText == 0) {
     breakMinutes.innerText--;
     breakSeconds.innerText = 59;
-  } 
+  }
 };
 //reset values
 const resetBreak = () => {
@@ -126,10 +131,9 @@ startPomo.addEventListener("click", () => {
   } else {
     alert("Timer already running!!!");
   }
-  breakButton.innerText = "Focus";
+  breakButton.innerText = "Focus Time";
   clearInterval(breaktimer);
   resetBreak();
-
 });
 pausePomo.addEventListener("click", () => {
   clearInterval(startTimer);
@@ -143,7 +147,7 @@ startBreak.addEventListener("click", () => {
   } else {
     alert("Timer already running!!!");
   }
-  breakButton.innerText = "Break";
+  breakButton.innerText = "Break Time";
   clearInterval(startTimer);
 });
 pauseBreak.addEventListener("click", () => {
@@ -154,7 +158,7 @@ pauseBreak.addEventListener("click", () => {
 reset.addEventListener("click", () => {
   localStorage.removeItem("counter");
   localStorage.removeItem("totalHours");
-  totalPomo.innerText = `Total Pomos: 0`; 
+  totalPomo.innerText = `Total Pomos: 0`;
   totalTime.innerText = `Total Time : 0 hrs`;
   clearInterval(startTimer);
   clearInterval(breaktimer);

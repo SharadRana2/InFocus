@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/7b002b9d7c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
   <title>InFocus</title>
+  <script defer src="app.js"></script>
 </head>
 <body>
-
   <div class="cover">
          <div class="left-content" >
              <header class="top-content">
@@ -18,39 +18,51 @@
            <div class="data">
              <div class="container">
                  <div class="pomoTimer">
+                  <div class="flexContainer">
                     <div class="pomoMinutes">25</div>
-                    <div class="pomoSeconds">00</div>     
+                    <div class="clockBreak">:</div>
+                    <div class="pomoSeconds">00</div>
+                  </div>  
+                    <section class="controlBtn">
+                      <button class="startPomo hvr-grow">
+                        <i class="fa-solid fa-play"></i>
+                      </button>
+                      <button class="pausePomo hvr-grow">
+                        <i class="fa-solid fa-pause"></i>
+                      </button>
+                     </section>     
                  </div>
-                 <section class="controlBtn">
-                  <button class="startPomo hvr-grow">Start</button>
-                  <button class="pausePomo hvr-grow">Pause</button>
-                 </section>
              </div>
                  <div class="container">
                        <section class="analytics">
                            <div class="totalPomo"></div>
                            <div class="totalTime"></div>
-                           <button class="Break">Focus</button>   
+                           <button class="Break">Focus Time</button>   
                            <button class="reset hvr-grow">Reset</button>                        
                        </section>              
                  </div>
                  <div class="container">
                        <div class="breakTimer">
+                        <div class="flexContainer">
                           <div class="breakMinutes">5</div>
+                          <div class="clockBreak">:</div>
                           <div class="breakSeconds">00</div>
-                       </div>
-                       <section class="controlBtn">
-                          <button class="startBreak hvr-grow">Start</button>
-                          <button class="pauseBreak hvr-grow">Pause</button>
-                       </section>
+                        </div>
+                          <section class="controlBtn">
+                            <button class="startBreak hvr-grow">
+                              <i class="fa-solid fa-play"></i>
+                            </button>
+                            <button class="pauseBreak hvr-grow">
+                              <i class="fa-solid fa-pause"></i>
+                            </button>
+                         </section>
+                       </div>                     
                  </div>
            </div>
-
                   <div class="quotes"></div>
                   <button class="button-quote hvr-grow">Change Quote?
                   </button>
-         </div>
-  
+         </div> 
          <div class="to-do-list">
               <h1>Today's Focus</h1>
               <form class="search">
@@ -59,11 +71,10 @@
               <ul class="list-group todos main-list ">
               </ul>
               <form class="add input-form">
-              <button class="add-button hvr-grow">Add New</button>
+              <button class="add-button hvr-grow ">Add New</button>
               <input class="form-control add-new bg-dark-box filter" type="text" name="add" placeholder="Add new ..." />
               </form>
          </div>
   </div>
-  <script src="app.js"></script>
 </body>
 </html>
