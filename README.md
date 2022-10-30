@@ -1,3 +1,4 @@
 # InFocus
 Tech-Stack - HTML CSS JAVASCRIPT.
-![pomo-app screenshot](https://user-images.githubusercontent.com/108972498/198652345-673a6086-19f9-4509-a593-90d4288bbff5.png)
+![infocus](https://user-images.githubusercontent.com/108972498/198901530-817841b9-401d-4d33-a1f7-9457eeed544a.png)
+
